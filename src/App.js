@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>This is a dog eat dog world</h1>
+      <h1>This is eat dog world</h1>
     </>
   );
 }
