@@ -1,12 +1,19 @@
-import Hero from "./compnents/Hero";
-function App() {
-  // <GoogleLoginButton onClick={() => alert("Hello")} />
-  // <TwitterLoginButton onClick={() => alert("Hello")} />
+import Home from "./compnents/Home";
+import Nav from "./compnents/Nav";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+function App() {
   return (
-    <>
-      <Hero />
-    </>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route>
+            <Home path="/" />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
