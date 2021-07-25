@@ -1,7 +1,11 @@
+import Hero from "./compnents/Hero";
 function App() {
+  // <GoogleLoginButton onClick={() => alert("Hello")} />
+  // <TwitterLoginButton onClick={() => alert("Hello")} />
+
   return (
     <>
-      <h1>This is eat dog world</h1>
+      <Hero />
     </>
   );
 }
