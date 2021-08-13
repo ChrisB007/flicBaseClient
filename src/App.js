@@ -12,7 +12,7 @@ function App({ value }) {
   const authAction = () => {
     axios
       .get("/api/current_user")
-      .then((res) => dispatch({ type: "AUTH_TYPE", payload: res }));
+      .then((res) => dispatch({ type: "AUTHENTICATION_TYPE", payload: res }));
   };
 
   useEffect(() => {
