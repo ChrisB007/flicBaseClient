@@ -9,10 +9,13 @@ function App({ value }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
-  const authAction = () => {
-    axios
-      .get("/auth/google/api/current_user")
-      .then((res) => dispatch({ type: "AUTHENTICATION_TYPE", payload: res }));
+  const authAction = async () => {
+    try {
+      const res = await axios.get("/auth/google/api/current_user");
+      dispatch({ type: "AUTHENTICATION_TYPE", payload: res });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
