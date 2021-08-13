@@ -17,7 +17,7 @@ function App({ value }) {
 
   useEffect(() => {
     authAction();
-  }, []);
+  });
 
   console.dir(user);
 
