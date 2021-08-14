@@ -97,7 +97,6 @@ export default function MoodMovie() {
       >
         {({ open }) => (
           <>
-            <Nav />
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="relative flex flex-wrap items-center justify-center lg:justify-between">
                 {/* Logo */}
