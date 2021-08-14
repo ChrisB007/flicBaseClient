@@ -177,13 +177,13 @@ function Nav() {
                     href="www.we.com"
                     className="text-base font-medium text-gray-500 hover:text-white"
                   >
-                    Pricing
+                    How it works
                   </a>
                   <a
                     href="www.we.com"
                     className="text-base font-medium text-gray-500 hover:text-white"
                   >
-                    Docs
+                    Contact Us
                   </a>
                 </Popover.Group>
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
