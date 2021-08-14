@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./components/Signin";
-import Dashboard from "./dashboard";
+import Dashboard from "./dashboard/index";
 
 function App({ value }) {
   const dispatch = useDispatch();
