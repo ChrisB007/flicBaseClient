@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import Home from "./compnents/Home";
 import Nav from "./compnents/Nav";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./compnents/Signin";
 
 function App({ value }) {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
   const authAction = async () => {
     try {
