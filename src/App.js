@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Signin from "./components/Signin";
+import SignIn from "./components/Signin";
 import Dashboard from "./dashboard/index";
 
 function App({ value }) {
@@ -33,9 +33,9 @@ function App({ value }) {
             <Home />
           </Route>
           <Route path="/signin">
-            <Signin />
+            <SignIn />
           </Route>
-          <Route exact path="/dashboard">
+          <Route path="/dashboard">
             <Dashboard />
           </Route>
         </Switch>
