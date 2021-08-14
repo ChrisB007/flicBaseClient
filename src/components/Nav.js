@@ -140,7 +140,7 @@ function Nav() {
                                       aria-hidden="true"
                                     />
                                     <div className="ml-4">
-                                      <p className="text-base font-medium text-white">
+                                      <p className="text-base font-medium text-gray-500">
                                         {item.name}
                                       </p>
                                       <p className="mt-1 text-sm text-gray-500">
@@ -155,7 +155,7 @@ function Nav() {
                                   <div key={item.name} className="flow-root">
                                     <a
                                       href={item.href}
-                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-white hover:bg-gray-100"
+                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-500 hover:bg-gray-100"
                                     >
                                       <item.icon
                                         className="flex-shrink-0 h-6 w-6 text-gray-400"
