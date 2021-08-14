@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signin from "./compnents/Signin";
+import Dashboard from "./dashboard";
 
 function App({ value }) {
   const dispatch = useDispatch();
@@ -33,6 +34,9 @@ function App({ value }) {
           </Route>
           <Route path="/signin">
             <Signin />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </div>
