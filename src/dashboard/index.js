@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
-import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
 
 const user = {
