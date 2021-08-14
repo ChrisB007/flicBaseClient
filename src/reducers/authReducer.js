@@ -1,5 +1,3 @@
-import authAction from "../actions/authAction";
-
 const authData = {};
 
 function authReducer(state = authData, action) {

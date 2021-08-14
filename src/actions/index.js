@@ -1,9 +1,10 @@
 import axios from "axios";
 
-export const authAction = () => {
-  return function (dispatch) {
-    axios
-      .get("/api/current_user")
-      .then((res) => dispatch({ type: "AUTH_TYPE", payload: res }));
-  };
+export const authAction = () => async (dispatch) => {
+  try {
+    const getUser = await axios.get("/auth/google/api/current_user");
+    dispatch({ type: "FETCH_USER", payload: getUser.data });
+  } catch (error) {
+    console.log(error);
+  }
 };

@@ -4,6 +4,7 @@ import Nav from "./compnents/Nav";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Signin from "./compnents/Signin";
 
 function App({ value }) {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ function App({ value }) {
   const authAction = async () => {
     try {
       const res = await axios.get("/auth/google/api/current_user");
-      dispatch({ type: "AUTHENTICATION_TYPE", payload: res });
+      dispatch({ type: "FETCH_USER", payload: res.data });
     } catch (error) {
       console.log(error);
     }
@@ -29,6 +30,9 @@ function App({ value }) {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/signin">
+            <Signin />
           </Route>
         </Switch>
       </div>

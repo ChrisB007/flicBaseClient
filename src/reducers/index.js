@@ -1,10 +1,9 @@
-import authAction from "../actions/authAction";
+import { authAction } from "../actions/index";
 
-const authData = {};
-
-function authReducer(state = authData, action) {
-  console.log(action);
+function authReducer(state = null, action) {
   switch (action.type) {
+    case "FETCH_USER":
+      return action.payload || false;
     default:
       return state;
   }

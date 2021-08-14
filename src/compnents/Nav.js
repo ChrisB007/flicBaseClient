@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -16,39 +16,21 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import { Link } from "react-router-dom";
 
 const features = [
   {
-    name: "Analytics",
+    name: "Film studios",
     href: "#",
     description:
       "Get a better understanding of where your traffic is coming from.",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
+    name: "Production companies",
     href: "#",
     description: "Speak directly to your customers in a more meaningful way.",
     icon: CursorClickIcon,
-  },
-  {
-    name: "Security",
-    href: "#",
-    description: "Your customers' data will be safe and secure.",
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: "Integrations",
-    href: "#",
-    description: "Connect with third-party tools that you're already using.",
-    icon: ViewGridIcon,
-  },
-  {
-    name: "Automations",
-    href: "#",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
-    icon: RefreshIcon,
   },
 ];
 const callsToAction = [
@@ -99,6 +81,9 @@ function classNames(...classes) {
 }
 
 function Nav() {
+  const [open, setOpen] = useState(false);
+  const cancelButtonRef = useRef(null);
+
   return (
     <div>
       <Popover className="relative bg-white shadow">
@@ -107,14 +92,14 @@ function Nav() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
-                  <a href="www.we.com">
-                    <span className="sr-only">Workflow</span>
+                  <Link to="/">
+                    <span className="sr-only">flicbase</span>
                     <img
                       className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt=""
+                      src="/images/logo.png"
+                      alt="flicbase logo"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="-mr-2 -my-2 md:hidden">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -132,7 +117,7 @@ function Nav() {
                             "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                           )}
                         >
-                          <span>Solutions</span>
+                          <span>Entertainment Companies</span>
                           <ChevronDownIcon
                             className={classNames(
                               open ? "text-gray-600" : "text-gray-400",
@@ -311,18 +296,18 @@ function Nav() {
                   </Popover>
                 </Popover.Group>
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                  <a
-                    href="www.we.com"
+                  <Link
+                    to="/signin"
                     className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
                   >
                     Sign in
-                  </a>
-                  <a
-                    href="www.we.com"
+                  </Link>
+                  <Link
+                    to="www.we.com"
                     className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Sign up
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
