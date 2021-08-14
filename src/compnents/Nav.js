@@ -191,7 +191,7 @@ function Nav() {
                     to="/signin"
                     className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
                   >
-                    Gain free access
+                    Gain free Access
                   </Link>
                 </div>
               </div>
