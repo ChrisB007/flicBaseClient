@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Home from "./compnents/Home";
-import Nav from "./compnents/Nav";
+import Home from "./components/Home";
+import Nav from "./components/Nav";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Signin from "./compnents/Signin";
+import Signin from "./components/Signin";
 import Dashboard from "./dashboard";
 
 function App({ value }) {
