@@ -189,7 +189,7 @@ function Nav() {
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                   <Link
                     to="/signin"
-                    className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-white"
+                    className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
                   >
                     Gain free access
                   </Link>
