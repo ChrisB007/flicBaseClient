@@ -12,7 +12,7 @@ export default function Topbar() {
         <div className="w-full py-6 flex items-center justify-between border-b border-green-500 lg:border-none">
           <div className="flex items-center">
             <a href="/dashboard">
-              <span className="sr-only">Workflow</span>
+              <span className="sr-only">Flicbase</span>
               <img className="logo" src="/images/logo.png" alt="logo" />
               flicBase
             </a>

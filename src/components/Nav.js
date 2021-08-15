@@ -25,7 +25,7 @@ const features = [
     icon: ChartBarIcon,
   },
   {
-    name: "Production companies",
+    name: "Production Studios",
     href: "#",
     description: "Speak directly to your customers in a more meaningful way.",
     icon: CursorClickIcon,
@@ -103,7 +103,7 @@ function Nav() {
                             "group rounded-md inline-flex items-center text-base font-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                           )}
                         >
-                          <span>Entertainment Companies</span>
+                          <span>Film & TV</span>
                           <ChevronDownIcon
                             className={classNames(
                               open ? "text-gray-600" : "text-gray-400",

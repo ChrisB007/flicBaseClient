@@ -15,12 +15,12 @@ export default function Hero() {
               <span className="block xl:inline text-white">
                 We gamify Sport,
               </span>{" "}
-              <span className="block text-red-600 xl:inline">
-                Why not Movies?
+              <span className="hero-text block text-red-600 xl:inline">
+                Why not Movies & TV?
               </span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl">
-              Choose a movie | Boost to Compete | Rack up points (& Win Prizes)
+              Choose a show | Boost to Compete | Rack up points (& Win Prizes)
             </p>
             <p className="mt-3 max-w-md mx-auto text-sm text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
               Point-based interactive database for film & TV
