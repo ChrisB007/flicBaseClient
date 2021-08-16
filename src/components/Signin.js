@@ -4,10 +4,6 @@ import {
 } from "react-social-login-buttons";
 
 function Signin() {
-  const googleAuth = () => {
-    window.location.href = "/auth/google";
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-900 to-black flex">
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
@@ -32,10 +28,9 @@ function Signin() {
 
                 <div className="mt-1 grid grid-cols-2 gap-6">
                   <div className="login-button">
-                    <GoogleLoginButton
-                      className="button-text"
-                      onClick={googleAuth}
-                    />
+                    <a href="/auth/google">
+                      <GoogleLoginButton className="button-text" />
+                    </a>
                   </div>
 
                   <div className="login-button">
