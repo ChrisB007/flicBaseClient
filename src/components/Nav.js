@@ -44,21 +44,21 @@ function Nav(props) {
         return;
       case false:
         return (
-          <Link
-            to="/signin"
+          <a
+            href="/signin"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
             Gain free Access
-          </Link>
+          </a>
         );
       default:
         return (
-          <Link
-            to="/auth/google/logout"
+          <a
+            href="/auth/google/logout"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
             Log Out
-          </Link>
+          </a>
         );
     }
   };
