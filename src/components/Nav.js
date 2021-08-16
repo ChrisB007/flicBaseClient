@@ -2,23 +2,20 @@ import React from "react";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
   ChartBarIcon,
   CursorClickIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
-  ShieldCheckIcon,
-  SupportIcon,
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 const features = [
   {
-    name: "Film studios",
+    name: "Film Studios",
     href: "#",
     description:
       "Get a better understanding of where your traffic is coming from.",
@@ -35,41 +32,37 @@ const callsToAction = [
   { name: "Pricing", href: "#", icon: PlayIcon },
   { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ];
-const resources = [
-  {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
-  },
-  {
-    name: "Guides",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: "Events",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "#",
-    icon: CalendarIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Nav() {
+function Nav(props) {
+  const userLoggedIn = () => {
+    switch (props.auth) {
+      case null:
+        return;
+      case false:
+        return (
+          <Link
+            to="/signin"
+            className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+          >
+            Gain free Access
+          </Link>
+        );
+      default:
+        return (
+          <Link
+            to="/auth/google/logout"
+            className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+          >
+            Log Out
+          </Link>
+        );
+    }
+  };
+
   return (
     <div>
       <Popover className="relative bg-black shadow">
@@ -186,13 +179,9 @@ function Nav() {
                     Contact Us
                   </a>
                 </Popover.Group>
+                {}
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                  <Link
-                    to="/signin"
-                    className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-                  >
-                    Gain free Access
-                  </Link>
+                  <span className="text-white">{userLoggedIn()}</span>
                 </div>
               </div>
             </div>
@@ -257,22 +246,6 @@ function Nav() {
                       >
                         Pricing
                       </a>
-
-                      <a
-                        href="www.we.com"
-                        className="text-base font-medium text-white hover:text-gray-700"
-                      >
-                        Docs
-                      </a>
-                      {resources.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="text-base font-medium text-white hover:text-gray-700"
-                        >
-                          {item.name}
-                        </a>
-                      ))}
                     </div>
                     <div>
                       <a
@@ -302,4 +275,8 @@ function Nav() {
   );
 }
 
-export default Nav;
+const stateToProps = ({ auth }) => {
+  return { auth };
+};
+
+export default connect(stateToProps)(Nav);

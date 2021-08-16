@@ -3,7 +3,11 @@ import {
   TwitterLoginButton,
 } from "react-social-login-buttons";
 
-export default function Signin() {
+function Signin() {
+  const googleAuth = () => {
+    window.location.href = "/auth/google";
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-900 to-black flex">
       <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
@@ -30,7 +34,7 @@ export default function Signin() {
                   <div className="login-button">
                     <GoogleLoginButton
                       className="button-text"
-                      onClick={() => alert("Hello")}
+                      onClick={googleAuth}
                     />
                   </div>
 
@@ -147,3 +151,5 @@ export default function Signin() {
     </div>
   );
 }
+
+export default Signin;
