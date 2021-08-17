@@ -3,7 +3,7 @@ import { Menu, Popover, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Route, Redirect, Link } from "react-router-dom";
 
 const user = {
   name: "Chelsea Hagon",
