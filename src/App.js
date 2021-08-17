@@ -22,7 +22,8 @@ function App({ value }) {
 
   useEffect(() => {
     authAction();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Router>

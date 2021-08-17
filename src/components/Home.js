@@ -1,6 +1,8 @@
 import React from "react";
 import Body from "./Body";
+import BodyTwo from "./BodyTwo";
 import Footer from "./Footer";
+import Gamify from "./Gamify";
 import Hero from "./Hero";
 
 function Home() {
@@ -8,6 +10,8 @@ function Home() {
     <div>
       <Hero />
       <Body />
+      <Gamify />
+      <BodyTwo />
       <Footer />
     </div>
   );

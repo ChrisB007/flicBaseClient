@@ -48,7 +48,7 @@ function Nav(props) {
             href="/signin"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
-            Gain free Access
+            Gain Free Access
           </a>
         );
       default:

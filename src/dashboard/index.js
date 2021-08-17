@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const user = {
@@ -87,7 +88,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function MoodMovie() {
+function MoodMovie(props) {
+  console.log(props.auth);
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-900 to-black">
       <Popover
@@ -501,3 +504,9 @@ export default function MoodMovie() {
     </div>
   );
 }
+
+const stateToProps = ({ auth }) => {
+  return { auth };
+};
+
+export default connect(stateToProps)(MoodMovie);
