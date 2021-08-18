@@ -13,7 +13,9 @@ function App({ value }) {
 
   const authAction = async () => {
     try {
-      const res = await axios.get("/auth/google/api/current_user");
+      const res = await axios.get(
+        "https://calm-beyond-30005.herokuapp.com/auth/google/api/current_user"
+      );
       dispatch({ type: "FETCH_USER", payload: res.data });
     } catch (error) {
       console.log(error);
