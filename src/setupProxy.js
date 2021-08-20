@@ -3,7 +3,7 @@ module.exports = function (app) {
   app.use(
     ["/api", "/auth/google", "auth/*"],
     createProxyMiddleware({
-      target: "https://calm-beyond-30005.herokuapp.com/",
+      target: "REACT_APP_HEROKU_SERVER_URL",
     })
   );
 };
