@@ -1,9 +1,9 @@
 const createProxyMiddleware = require("http-proxy-middleware");
 module.exports = function (app) {
   app.use(
-    ["/api", "/auth/google"],
+    ["/api", "/auth/google", "auth/*"],
     createProxyMiddleware({
-      target: "http://localhost:4040",
+      target: "https://calm-beyond-30005.herokuapp.com/",
     })
   );
 };
