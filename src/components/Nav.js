@@ -54,7 +54,7 @@ function Nav(props) {
       default:
         return (
           <a
-            href={`${process.env.REACT_APP_HEROKU_SERVER_URL}/auth/google/logout`}
+            href="/auth/google/logout"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
             Log Out
