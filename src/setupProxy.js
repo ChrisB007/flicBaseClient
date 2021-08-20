@@ -3,7 +3,7 @@ module.exports = function (app) {
   app.use(
     ["/api", "/auth/google"],
     createProxyMiddleware({
-      target: "http://localhost:4040",
+      target: "REACT_APP_HEROKU_SERVER_URL",
     })
   );
 };
