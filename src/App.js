@@ -14,9 +14,10 @@ function App({ value }) {
   const authAction = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_HEROKU_SERVER_URL}/auth/google/current_user`
+        `http://localhost:4040/auth/google/current_user`
       );
       dispatch({ type: "FETCH_USER", payload: res.data });
+      console.log(res);
     } catch (error) {
       console.log(error);
     }
