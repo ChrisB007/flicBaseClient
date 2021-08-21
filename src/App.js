@@ -13,7 +13,7 @@ function App({ value }) {
 
   const authAction = async () => {
     try {
-      const res = await axios.get("api/auth/google/current_user");
+      const res = await axios.get("auth/google/current_user");
       dispatch({ type: "FETCH_USER", payload: res.data });
     } catch (error) {
       console.log(error);

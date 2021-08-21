@@ -44,17 +44,17 @@ function Nav(props) {
         return;
       case false:
         return (
-          <a
+          <Link
             href="/signin"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
             Gain Free Access
-          </a>
+          </Link>
         );
       default:
         return (
           <a
-            href="api/auth/google/logout"
+            href="/auth/google/logout"
             className="whitespace-nowrap hover:text-white inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
           >
             Log Out
